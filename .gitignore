@@ -18,19 +18,25 @@ data/silence/
 data/features.npz
 *.npz
 
-# --- Model artifacts (regenerate via scripts/train.py) ---
-model.pkl
+# --- Model artifacts ---
+# Keep the single canonical model.pkl (small, ~0.1 MB) but ignore any other
+# checkpoints that might be produced during experimentation.
 *.pt
 *.pth
 *.ckpt
+*_checkpoint*.pkl
 checkpoints/
 
-# --- Logs & results (generated) ---
+# --- Logs (generated, not committed) ---
 logs/*
 !logs/.gitkeep
-results/*
-!results/.gitkeep
 *.log
+
+# --- Results: keep the small analysis artifacts, ignore bulky extras ---
+results/*.png
+!results/confusion_matrix_test.png
+!results/confusion_matrix_val.png
+results/*.jsonl
 
 # --- User recordings (never commit personal audio) ---
 user_recordings/
