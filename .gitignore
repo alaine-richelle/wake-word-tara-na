@@ -16,7 +16,11 @@ data/negative/
 data/noise/
 data/silence/
 data/features.npz
+data/manifest.csv
 *.npz
+
+# --- Test scratch space ---
+tests/_tmp/
 
 # --- Model artifacts ---
 # Keep the single canonical model.pkl (small, ~0.1 MB) but ignore any other
