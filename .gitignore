@@ -1,0 +1,42 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+
+# --- Raw / generated audio & data (large, not version-controlled) ---
+data/**/*.wav
+data/positive/
+data/negative/
+data/noise/
+data/silence/
+data/features.npz
+*.npz
+
+# --- Model artifacts (regenerate via scripts/train.py) ---
+model.pkl
+*.pt
+*.pth
+*.ckpt
+checkpoints/
+
+# --- Logs & results (generated) ---
+logs/*
+!logs/.gitkeep
+results/*
+!results/.gitkeep
+*.log
+
+# --- User recordings (never commit personal audio) ---
+user_recordings/
+
+# --- OS / editor ---
+.DS_Store
+.idea/
+.vscode/
+*.swp
